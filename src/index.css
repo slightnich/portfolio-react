@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white dark:bg-black text-gray-900 dark:text-white transition-colors duration-300;
+  }
+
+  .font-logo {
+    font-family: 'Pacifico', cursive;
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-100 dark:bg-gray-900;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gradient-to-b from-cyan-500 to-blue-500 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-gradient-to-b from-cyan-500 to-blue-500 rounded-full;
+  }
+
+  /* Section Backgrounds */
+  .section-gradient-dark {
+    @apply bg-gradient-to-b from-gray-100 to-white dark:from-gray-900 dark:to-black;
+  }
+
+  .section-gradient-light {
+    @apply bg-gradient-to-b from-white to-gray-100 dark:from-black dark:to-gray-900;
+  }
+}
+
+/* Gradient Text */
+.gradient-text {
+  @apply bg-gradient-to-r from-cyan-500 to-blue-500 text-transparent bg-clip-text;
+}
+
+/* Button Styles */
+.btn-primary {
+  @apply bg-gradient-to-r from-cyan-500 to-blue-500 px-6 py-3 rounded-lg hover:scale-105 transition-transform;
+}
+
+.btn-secondary {
+  @apply px-6 py-3 rounded-lg border-2 border-cyan-500 hover:bg-cyan-500/10 transition-colors;
+}
+
+/* Section Title */
+.section-title {
+  @apply text-4xl font-bold inline border-b-4 border-gray-500;
+}
+
+/* Card Styles */
+.card {
+  @apply bg-gradient-to-b from-gray-900 to-gray-800 rounded-xl p-8 shadow-lg dark:bg-gradient-to-b dark:from-gray-100 dark:to-white;
+}
+
+/* Animation Classes */
+.hover-scale {
+  @apply hover:scale-105 transition-transform duration-300;
+}
+
+.hover-glow {
+  @apply hover:shadow-lg hover:shadow-cyan-500/20 transition-shadow duration-300;
+}

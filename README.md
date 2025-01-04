@@ -117,3 +117,9 @@ In the project directory, you can run:
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Copyright
+
+Copyright 2025 Kens Ransyah. All rights reserved.
+
+This portfolio website and its contents are protected by copyright law. Any unauthorized use, reproduction, or distribution of the content without permission is strictly prohibited.

@@ -1,3 +1,7 @@
+/**
+ * @nexon.js - Kens Ransyah
+ **/
+
 import { motion } from 'framer-motion';
 import { FaCheck } from 'react-icons/fa';
 import type { FC } from 'react';

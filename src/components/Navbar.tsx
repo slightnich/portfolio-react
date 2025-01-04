@@ -24,7 +24,7 @@ const Navbar = () => {
     },
     {
       id: 3,
-      link: 'portfolio',
+      link: 'project',
     },
     {
       id: 4,
@@ -60,9 +60,11 @@ const Navbar = () => {
               to={link}
               smooth
               duration={500}
-              className="capitalize text-gray-700 dark:text-gray-300 hover:text-cyan-500 dark:hover:text-cyan-400 cursor-pointer transition-colors duration-300"
+              className={`capitalize text-gray-700 dark:text-gray-300 hover:text-cyan-500 dark:hover:text-cyan-400 cursor-pointer transition-colors duration-300 ${
+                link === 'project' ? 'text-cyan-500' : ''
+              }`}
             >
-              {link}
+              {link === 'project' ? 'My Project' : link}
             </Link>
           ))}
           <motion.button
@@ -105,9 +107,11 @@ const Navbar = () => {
                     to={link}
                     smooth
                     duration={500}
-                    className="px-4 cursor-pointer capitalize py-6 text-2xl text-gray-700 dark:text-gray-300 hover:text-cyan-500 dark:hover:text-cyan-400 transition-colors duration-300"
+                    className={`px-4 cursor-pointer capitalize py-6 text-2xl text-gray-700 dark:text-gray-300 hover:text-cyan-500 dark:hover:text-cyan-400 transition-colors duration-300 ${
+                      link === 'project' ? 'text-cyan-500' : ''
+                    }`}
                   >
-                    {link}
+                    {link === 'project' ? 'My Project' : link}
                   </Link>
                 ))}
                 <motion.button

@@ -7,7 +7,6 @@ import { motion } from 'framer-motion';
 const About = () => {
   return (
     <div
-      name="about"
       className="w-full min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300"
     >
       <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center items-center w-full h-full">

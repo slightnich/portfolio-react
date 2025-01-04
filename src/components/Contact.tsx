@@ -52,7 +52,6 @@ const Contact = () => {
 
   return (
     <div
-      name="contact"
       className="w-full min-h-screen bg-gradient-to-b from-gray-100 to-white dark:from-black dark:to-gray-900 text-gray-900 dark:text-white transition-colors duration-300"
     >
       <div className="flex flex-col p-4 justify-center items-center max-w-screen-lg mx-auto h-full">

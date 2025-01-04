@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 import { FaGithub } from 'react-icons/fa';
 import { RiExternalLinkLine } from 'react-icons/ri';
 
-const Portfolio = () => {
+const MyProject = () => {
   const portfolios = [
     {
       id: 1,
@@ -36,7 +36,6 @@ const Portfolio = () => {
 
   return (
     <div
-      name="portfolio"
       className="w-full min-h-screen bg-gradient-to-b from-white to-gray-100 dark:from-gray-900 dark:to-black text-gray-900 dark:text-white transition-colors duration-300"
     >
       <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center items-center w-full h-full">
@@ -47,7 +46,7 @@ const Portfolio = () => {
             transition={{ duration: 0.5 }}
             className="text-4xl font-bold inline border-b-4 border-cyan-500"
           >
-            Portfolio
+            My Project
           </motion.h2>
           <motion.p 
             initial={{ opacity: 0 }}
@@ -115,4 +114,4 @@ const Portfolio = () => {
   );
 };
 
-export default Portfolio;
+export default MyProject;

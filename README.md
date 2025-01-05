@@ -17,7 +17,7 @@ A modern portfolio website built with React, TypeScript, Tailwind CSS, and Node.
 
 1. Clone the repository:
 ```bash
-git clone [your-repo-url]
+git clone https://github.com/slightnich/portofolio-react
 cd portfolio-react
 ```
 

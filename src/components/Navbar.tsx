@@ -11,7 +11,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
-  const { theme, toggleTheme } = useTheme();
+  const { isDarkMode, toggleTheme } = useTheme();
 
   const links = [
     {
@@ -74,7 +74,7 @@ const Navbar = () => {
             className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-300"
             aria-label="Toggle theme"
           >
-            {theme === 'dark' ? (
+            {isDarkMode ? (
               <BsSun className="text-yellow-500" size={20} />
             ) : (
               <BsMoonStars className="text-blue-500" size={20} />
@@ -121,7 +121,7 @@ const Navbar = () => {
                   className="mt-6 p-3 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-300"
                   aria-label="Toggle theme"
                 >
-                  {theme === 'dark' ? (
+                  {isDarkMode ? (
                     <BsSun className="text-yellow-500" size={24} />
                   ) : (
                     <BsMoonStars className="text-blue-500" size={24} />

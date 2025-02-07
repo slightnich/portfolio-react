@@ -69,7 +69,7 @@ const Pricing: FC = () => {
 
   return (
     <div
-      name="pricing"
+      data-name="pricing"
       className="w-full min-h-screen bg-gradient-to-b from-white to-gray-100 dark:from-gray-900 dark:to-black text-gray-900 dark:text-white transition-colors duration-300"
     >
       <div className="max-w-screen-xl p-4 mx-auto flex flex-col justify-center w-full h-full">

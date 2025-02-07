@@ -95,6 +95,94 @@ In the project directory, you can run:
 - `npm start` - Start the email server
 - `npm run dev` - Start server with hot-reload (requires nodemon)
 
+## Deployment
+
+### Deploying to Vercel (Website Method)
+
+1. Push your code to GitHub:
+```bash
+git add .
+git commit -m "Ready for deployment"
+git push origin main
+```
+
+2. Go to [Vercel.com](https://vercel.com) and sign up/login with your GitHub account
+
+3. Deploy your project:
+   - Click "Add New Project"
+   - Import your GitHub repository
+   - Select the repository you want to deploy
+   - Configure your project:
+     - Framework Preset: Vite
+     - Build Command: `npm run build`
+     - Output Directory: `dist`
+     - Install Command: `npm install`
+
+4. Environment Variables (if using email service):
+   - Go to Project Settings > Environment Variables
+   - Add your environment variables:
+     ```
+     EMAIL_USER=your.email@gmail.com
+     EMAIL_PASS=your_app_password
+     ```
+
+5. Click "Deploy" and wait for the build to complete
+
+6. Your site will be available at: `https://your-project-name.vercel.app`
+
+7. For custom domains:
+   - Go to Project Settings > Domains
+   - Add your custom domain and follow the DNS configuration instructions
+
+### Automatic Updates
+- Vercel will automatically deploy when you push changes to your GitHub repository
+- You can view deployment history and logs in the Vercel dashboard
+- To disable automatic deployments:
+  - Go to Project Settings > Git
+  - Configure the auto-deployment settings
+
+### Deploying to cPanel
+
+1. Build your project:
+```bash
+npm run build
+```
+
+2. Prepare your files:
+   - Compress the `dist` folder into a ZIP file
+   - If you're using the email service, also include the `api` folder
+
+3. cPanel Setup:
+   - Log in to your cPanel account
+   - Navigate to File Manager
+   - Go to the directory where you want to deploy your website (usually `public_html` or a subdirectory)
+   - Upload and extract the ZIP file
+
+4. For the Node.js API (if using email service):
+   - In cPanel, go to Setup Node.js App
+   - Click "Create Application"
+   - Set your application path (e.g., `/api`)
+   - Set your application URL (e.g., `yourdomain.com/api`)
+   - Set Node.js version (recommended: 18.x or latest LTS)
+   - Set the application startup file: `index.js`
+   - Set application mode: Production
+   - Click "Create"
+
+5. Configure environment variables in cPanel:
+   - In the Node.js app settings, find the "Environment Variables" section
+   - Add your environment variables:
+     ```
+     EMAIL_USER=your.email@gmail.com
+     EMAIL_PASS=your_app_password
+     ```
+   - Save changes and restart the application
+
+6. Update API endpoint:
+   - In your frontend code, update the API endpoint to match your domain
+   - Rebuild and reupload the frontend if necessary
+
+Note: Make sure your hosting provider supports Node.js if you're planning to use the email service. Some shared hosting plans might not include Node.js support.
+
 ## Technologies Used
 
 - React
